@@ -115,7 +115,7 @@ EOM
                       "requirejs:test_node"] do
       requirejs.config.target_dir.mkpath
 
-      `node "#{requirejs.config.driver_path}"`
+      `nodejs "#{requirejs.config.driver_path}"`
       unless $?.success?
         raise RuntimeError, "Asset compilation with node failed."
       end
